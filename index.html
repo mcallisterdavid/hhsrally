@@ -1,7 +1,95 @@
-<!DOCTYPE html>
+<!DOCType HTML>
 <html>
+<head>
+<title>Testing JavaScript</title>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+	<p id="sayHello">
+	    
+	</p>
+	
+	<script>
+	
+	
+	    function colorShift(r1, g1, b1, r2, g2, b2, duration)
+	    {
+	        var rIncrement = (r2-r1)/duration;
+	        var gIncrement = (g2-g1)/duration;
+	        var bIncrement = (b2-b1)/duration;
+	        //console.log(rIncrement);
+	        //console.log(gIncrement);
+	        //console.log(bIncrement);
+	        var counter = 0
+
+	        for(i = 0; i<duration; i += 2)
+	        {
+	            
+	        setTimeout(function(){
+	            //console.log(counter*rIncrement);
+	            var rValue = r1 + parseInt(counter*rIncrement, 10);
+	            var gValue = g1 + parseInt(counter*gIncrement, 10);
+	            var bValue = b1 + parseInt(counter*bIncrement, 10);
+
+	        document.body.style.backgroundColor = "rgb(" + rValue.toString() + ", " + gValue.toString() + ", " + bValue.toString() + ")";
+            
+	            
+	       counter += 2
+	       
+            }, i*2);
+
+            }
+
+	        
+	        
+	        
+	    }
+	    
+	    function colorToColor(r1, g1, b1, r2, g2, b2, duration)
+	    {
+	        
+	       setTimeout(function(){
+	            console.log(counter*rIncrement);
+	            
+
+	        document.body.style.backgroundColor = "rgb(" + rValue.toString() + ", 102, 102)";
+            
+	            
+	       counter += 2
+	       
+            }, i*2); 
+	    }
+	
+	    function openAlert(mess)
+	    {
+	        colorShift(0, 97, 255, 255, 0, 80, 300);
+	        var counter = 0
+	        for(i = 0; i<256; i++)
+	        {
+	            
+	        setTimeout(function(){
+	            //console.log("hello");
+	            var res = mess.charAt(counter);
+	            //console.log(res);
+	           counter = counter + 1;
+	           var d = new Date();
+	        var n = d.getTime();
+	        //console.log(i)
+	        //document.body.style.backgroundColor = "rgb(" + (counter).toString() + ", 102, 102)";
+
+
+    //console.log("dog".charAt(i));
+            }, i*16);
+            	            //console.log(counter);
+
+            }
+	        
+	        //alert(n);
+	    }
+	    
+	</script>
+	
+		    <a href="JavaScript:void(0)" onClick="openAlert('Hello');">Say Hello</a><br />
+
+	
 </body>
 </html>
