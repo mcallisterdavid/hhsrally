@@ -13,14 +13,14 @@
     <script text="javascript" src="http://github.com/webtiming/timingsrc/lib/timingsrc-v2.js"></script>
     <script text="javascript">
         requires(timedData);
-      var init = function () {
-        // create timing object
-        var to = new TIMINGSRC.TimingObject();
-        // create sequencer
-        var s = new TIMINGSRC.Sequencer(to);
-      };
-      if (document.readyState === "complete") init();
-      else window.onload = init;
+        var init = function () {
+            // create timing object
+            var to = new TIMINGSRC.TimingObject();
+            // create sequencer
+            var s = new TIMINGSRC.Sequencer(to);
+        };
+        if (document.readyState === "complete") init();
+        else window.onload = init;
 
         // Timed data
         var array = timedData.array;
@@ -29,6 +29,7 @@
         for (var i=0; i<array.length; i++) {
             var obj = array[i];
             s.addCue(i.toString(), new Interval(obj.start, obj.end), obj.data);
+            console.log(i.toString());
         }
 
         var viewer = function (sequencer, elem) {
@@ -36,6 +37,7 @@
         var change = function (e) {
             key = e.key;
             elem.innerHTML = e.data;
+            document.body.style.backgroundColor = "rgb(" + e.r.toString() + ", " + e.g.toString() + ", " +  e.b.toString() + ")";
             console.log(e.toString());
         };
         var remove = function (e) {
