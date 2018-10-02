@@ -13,51 +13,52 @@
     <script text="javascript" src="http://github.com/webtiming/timingsrc/lib/timingsrc-v2.js"></script>
     <script text="javascript">
         requires(timedData);
+
         var init = function () {
             // create timing object
             var to = new TIMINGSRC.TimingObject();
             // create sequencer
             var s = new TIMINGSRC.Sequencer(to);
+
+          // Timed data
+          var array = timedData.array;
+
+          // Load timed data, use array indexes as keys into Sequencer
+          for (var i=0; i<array.length; i++) {
+              var obj = array[i];
+              s.addCue(i.toString(), new Interval(obj.start, obj.end), obj.data);
+              console.log(i.toString());
+          }
+
+          var viewer = function (sequencer, elem) {
+            var key = undefined;
+            var change = function (e) {
+                key = e.key;
+                elem.innerHTML = e.data;
+                document.body.style.backgroundColor = "rgb(" + e.r.toString() + ", " + e.g.toString() + ", " +  e.b.toString() + ")";
+                console.log(e.toString());
+            };
+            var remove = function (e) {
+                if (e.key === key) {
+                    elem.innerHTML = "";
+                    key = undefined;
+                }
+                console.log(e.toString());
+            };
+            sequencer.on("change", change);
+            sequencer.on("remove", remove);
+          };
+
+          viewer(s, document.getElementById("viewer"));
         };
-        if (document.readyState === "complete") init();
-        else window.onload = init;
+      if (document.readyState === "complete") init();
+      else window.onload = init;
 
-        // Timed data
-        var array = timedData.array;
+      document.getElementById('play').onclick = function () {timingObject.update({velocity:1.0});};
+      document.getElementById('pause').onclick = function () {timingObject.update({velocity:0.0});};
+      document.getElementById('reset').onclick = function () {timingObject.update({position: 0.0});};
 
-        // Load timed data, use array indexes as keys into Sequencer
-        for (var i=0; i<array.length; i++) {
-            var obj = array[i];
-            s.addCue(i.toString(), new Interval(obj.start, obj.end), obj.data);
-            console.log(i.toString());
-        }
 
-        var viewer = function (sequencer, elem) {
-        var key = undefined;
-        var change = function (e) {
-            key = e.key;
-            elem.innerHTML = e.data;
-            document.body.style.backgroundColor = "rgb(" + e.r.toString() + ", " + e.g.toString() + ", " +  e.b.toString() + ")";
-            console.log(e.toString());
-        };
-        var remove = function (e) {
-            if (e.key === key) {
-                elem.innerHTML = "";
-                key = undefined;
-            }
-            console.log(e.toString());
-        };
-        sequencer.on("change", change);
-        sequencer.on("remove", remove);
-        };
-
-        viewer(s, document.getElementById("viewer"));
-
-        document.getElementById('play').onclick = function () {timingObject.update({velocity:1.0});};
-        document.getElementById('pause').onclick = function () {timingObject.update({velocity:0.0});};
-        document.getElementById('reset').onclick = function () {timingObject.update({position: 0.0});};
-
-    
     </script>
 
   </body>
