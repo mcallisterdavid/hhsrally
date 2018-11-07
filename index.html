@@ -90,11 +90,7 @@
 		  el.classList.remove("active");
 		});
 
-        // Set up controls for timing object
-        document.getElementById("pause").onclick = function () {to.update({velocity: 0.0});};
-        document.getElementById("reset").onclick = function () {to.update({position:0.0, velocity: 0.0});};
-        document.getElementById("play").onclick = function () {to.update({velocity:1.0});};
-        document.getElementById("backwards").onclick = function () {to.update({velocity: -1.0});};
+       
         // Report position of timing objects
         var pos = document.getElementById("pos");
         to.on("timeupdate", function () {
@@ -210,25 +206,13 @@
 
 
 	
-		    <a href="JavaScript:void(0)" onClick="openAlert('Hello');">Say Hello</a><br />
-
-		    <p>
-      Sequencer demo control console. Copyright David McAllister and Eric Cheng 2018. Synchronization powered by Motion Corporation.
-    </p>
+		    
     <p>
       <!-- Timing Objects position --> 
       Timing Object position <span id="pos"></span>
     </p>
-    <p>
-      <!-- Timing Object Controls -->
-      <button id="play">Play</button>
-      <button id="pause">Pause</button>
-      <button id="reset">Reset</button>
-      <button id="backwards">Backwards</button>
-    </p>
-    <p>
-      <div id="data"></div>
-    </p>
+    
+    
 
 	
 </body>
