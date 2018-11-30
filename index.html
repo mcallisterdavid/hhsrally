@@ -23,30 +23,59 @@
 	var app = MCorp.app(MCORP_APPID, {anon:true});
 	  
 	
-	
+		//8 measures
 
 		// Timed Data
 		//200 per second
 	      var data = {
-	        changez0z0z0zkdk: {data: 'A,B,C,D', start: 0, end: 1 },
-	        shiftz0z0z0z46z212z242z1600: {data: 'B,A,B,C,D', start: 4, end: 12 },
-	        // shiftz46z212z242z46z212z242z1600: {data: 'C,A,B,C,D', start: 12, end: 20},
-	        shiftz0z0z0z0z0z0z100zkk: {data: 'D,A,B,C,D', start: 20, end: 21},
-	        shiftz46z212z242z46z212z242z100zdk: {data: 'C,A,B,C,D', start: 21, end: 22},
-	        shiftz0z0z0z0z0z0z100zmm: {data: 'C,A,B,C,D', start: 22, end: 23},
-	        shiftz46z212z242z46z212z242z100zkjl: {data: 'C,A,B,C,D', start: 23, end: 24},
-	        shiftz0z0z0z46z212z242z1600zdd: {data: 'N', start: 24, end: 32},
+	        changez0z0z0zkdk: {data: 'A,B,C,D', start: 3.99, end: 4},
+	        shiftz0z0z0z153z102z255z3200: {data: 'B,A,B,C,D', start: 4, end: 36},
+	        shiftz153z102z255z250z215z102z400: {data: 'B,A,B,C,D', start: 36, end: 40},
+	        shiftz250z215z102z55z92z212z400: {data: 'B,A,B,C,D', start: 40, end: 44},
+	        shiftz55z92z212z153z102z255z400: {data: 'B,A,B,C,D', start: 44, end: 48},
+	        shiftz153z102z255z0z0z0z400: {data: 'B,A,B,C,D', start: 48, end: 52},
+
+	        //follows perc
+	        shiftz153z102z255z153z102z255z50: {data: 'B,A,B,C,D', start: 52, end: 52.5},
+	        shiftz250z215z102z250z215z102z50: {data: 'B,A,B,C,D', start: 52.5, end: 53},
+	        shiftz55z92z212z55z92z212z50: {data: 'B,A,B,C,D', start: 53, end: 53.5},
+	        shiftz0z0z0z0z0z0z50: {data: 'B,A,B,C,D', start: 53.5, end: 54},
+
+	        shiftz153z102z255z153z102z255z50zkk: {data: 'B,A,B,C,D', start: 54, end: 54.5},
+	        shiftz250z215z102z250z215z102z50zll: {data: 'B,A,B,C,D', start: 54.5, end: 55},
+	        shiftz55z92z212z55z92z212z50zm: {data: 'B,A,B,C,D', start: 55, end: 55.5},
+	        shiftz0z0z0z0z0z0z50zmm: {data: 'B,A,B,C,D', start: 55.5, end: 56},
+
+	        shiftz153z102z255z153z102z255z50zkd: {data: 'B,A,B,C,D', start: 56, end: 56.5},
+	        shiftz250z215z102z250z215z102z50zld: {data: 'B,A,B,C,D', start: 56.5, end: 57},
+	        shiftz55z92z212z55z92z212z50zd: {data: 'B,A,B,C,D', start: 57, end: 57.5},
+	        shiftz0z0z0z0z0z0z50zmd: {data: 'B,A,B,C,D', start: 57.5, end: 58},
+
+	        shiftz153z102z255z153z102z255z50zks: {data: 'B,A,B,C,D', start: 58, end: 58.5},
+	        shiftz250z215z102z250z215z102z50zls: {data: 'B,A,B,C,D', start: 58.5, end: 59},
+	        shiftz55z92z212z55z92z212z50zs: {data: 'B,A,B,C,D', start: 59, end: 59.5},
+	        shiftz0z0z0z0z0z0z50zms: {data: 'B,A,B,C,D', start: 59.5, end: 60},
+
+
+	        // shiftz0z0z0z0z0z0z100zkk: {data: 'D,A,B,C,D', start: 20, end: 21},
+	        // shiftz46z212z242z46z212z242z100zdk: {data: 'C,A,B,C,D', start: 21, end: 22},
+	        // shiftz0z0z0z0z0z0z100zmm: {data: 'C,A,B,C,D', start: 22, end: 23},
+	        // shiftz46z212z242z46z212z242z100zkjl: {data: 'C,A,B,C,D', start: 23, end: 24},
+	        // shiftz0z0z0z0z0z0z100zdd: {data: 'N', start: 24, end: 25},
+	        // shiftz46z212z242z46z212z242z100zdf: {data: 'N', start: 24.5, end: 25},
+	        // shiftz0z0z0z0z0z0z100zds: {data: 'N', start: 25, end: 26},
+
 	        // o: {data: 'O', start: 28, end: 29 },
 	        // p: {data: 'P', start: 30, end: 31 },
 	        // q: {data: 'Q', start: 32, end: 33 },
-	        r: {data: 'R', start: 34, end: 35 },
-	        s: {data: 'S', start: 36, end: 37 },
-	        t: {data: 'T', start: 38, end: 39 },
-	        u: {data: 'U', start: 40, end: 41 },
-	        v: {data: 'V', start: 42, end: 43 },
-	        w: {data: 'W', start: 44, end: 45 },
-	        x: {data: 'X', start: 46, end: 47 },
-	        y: {data: 'Y', start: 48, end: 49 },
+	        // r: {data: 'R', start: 34, end: 35 },
+	        // s: {data: 'S', start: 36, end: 37 },
+	        // t: {data: 'T', start: 38, end: 39 },
+	        // u: {data: 'U', start: 40, end: 41 },
+	        // v: {data: 'V', start: 42, end: 43 },
+	        // w: {data: 'W', start: 44, end: 45 },
+	        // x: {data: 'X', start: 46, end: 47 },
+	        // y: {data: 'Y', start: 48, end: 49 },
 	      };
 
 		
