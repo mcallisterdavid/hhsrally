@@ -1,273 +1,37 @@
-<!DOCType HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en" >
+
 <head>
-<title>Homestead Rally Show</title>
-<script text="javascript" src="./lib/timingsrc.js"></script>
+  <meta charset="UTF-8">
+  <title>Select Your Class</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
 
-<script type="text/javascript" src="https://www.mcorp.no/lib/mcorp-2.0.js"></script>
-
-<style type="text/css">
-    .active {color:white}
-    </style>
+  
 </head>
+
 <body>
-	<p id="sayHello">
-	    
-	</p>
-	
-	<script>
-			
-		var MCORP_MOTION_NAME = "rallyMotion";
-	var MCORP_APPID = "6520928886213785439";
 
-	var app = MCorp.app(MCORP_APPID, {anon:true});
-	  
-	
-		//8 measures
+  
+<h1>Select Your Class</h1>
+<!--.canvas-->
+<div class="buttons"><a class="button1" href="index.html">Freshmen</a><a class="button2" href="#">Sophomores</a></div>
 
-		// Timed Data
-		//200 per second
-	      var data = {
-	        changez0z0z0zkdk: {data: 'A,B,C,D', start: 3.99, end: 4},
-	        shiftz0z0z0z153z102z255z3200: {data: 'B,A,B,C,D', start: 4, end: 36},
-	        shiftz153z102z255z250z215z102z400: {data: 'B,A,B,C,D', start: 36, end: 40},
-	        shiftz250z215z102z55z92z212z400: {data: 'B,A,B,C,D', start: 40, end: 44},
-	        shiftz55z92z212z153z102z255z400: {data: 'B,A,B,C,D', start: 44, end: 48},
-	        shiftz153z102z255z0z0z0z400: {data: 'B,A,B,C,D', start: 48, end: 52},
-
-	        //follows perc
-	        shiftz153z102z255z153z102z255z50: {data: 'B,A,B,C,D', start: 52, end: 52.5},
-	        shiftz250z215z102z250z215z102z50: {data: 'B,A,B,C,D', start: 52.5, end: 53},
-	        shiftz55z92z212z55z92z212z50: {data: 'B,A,B,C,D', start: 53, end: 53.5},
-	        shiftz0z0z0z0z0z0z50: {data: 'B,A,B,C,D', start: 53.5, end: 54},
-
-	        shiftz153z102z255z153z102z255z50zkk: {data: 'B,A,B,C,D', start: 54, end: 54.5},
-	        shiftz250z215z102z250z215z102z50zll: {data: 'B,A,B,C,D', start: 54.5, end: 55},
-	        shiftz55z92z212z55z92z212z50zm: {data: 'B,A,B,C,D', start: 55, end: 55.5},
-	        shiftz0z0z0z0z0z0z50zmm: {data: 'B,A,B,C,D', start: 55.5, end: 56},
-
-	        shiftz153z102z255z153z102z255z50zkd: {data: 'B,A,B,C,D', start: 56, end: 56.5},
-	        shiftz250z215z102z250z215z102z50zld: {data: 'B,A,B,C,D', start: 56.5, end: 57},
-	        shiftz55z92z212z55z92z212z50zd: {data: 'B,A,B,C,D', start: 57, end: 57.5},
-	        shiftz0z0z0z0z0z0z50zmd: {data: 'B,A,B,C,D', start: 57.5, end: 58},
-
-	        shiftz153z102z255z153z102z255z50zks: {data: 'B,A,B,C,D', start: 58, end: 58.5},
-	        shiftz250z215z102z250z215z102z50zls: {data: 'B,A,B,C,D', start: 58.5, end: 59},
-	        shiftz55z92z212z55z92z212z50zs: {data: 'B,A,B,C,D', start: 59, end: 59.5},
-	        shiftz0z0z0z0z0z0z50zms: {data: 'B,A,B,C,D', start: 59.5, end: 60},
+ <br><br><br><br><br>
 
 
-	        // shiftz0z0z0z0z0z0z100zkk: {data: 'D,A,B,C,D', start: 20, end: 21},
-	        // shiftz46z212z242z46z212z242z100zdk: {data: 'C,A,B,C,D', start: 21, end: 22},
-	        // shiftz0z0z0z0z0z0z100zmm: {data: 'C,A,B,C,D', start: 22, end: 23},
-	        // shiftz46z212z242z46z212z242z100zkjl: {data: 'C,A,B,C,D', start: 23, end: 24},
-	        // shiftz0z0z0z0z0z0z100zdd: {data: 'N', start: 24, end: 25},
-	        // shiftz46z212z242z46z212z242z100zdf: {data: 'N', start: 24.5, end: 25},
-	        // shiftz0z0z0z0z0z0z100zds: {data: 'N', start: 25, end: 26},
+<div class="buttons"><a class="button1" href="#">Junior</a><a class="button2" href="#">Senior</a></div>
+<!-- Footer-->
+<div class="foot-wrapper">
+  <p class="footer">Another Weird Thing By Limping Llama</p>
+</div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
 
-	        // o: {data: 'O', start: 28, end: 29 },
-	        // p: {data: 'P', start: 30, end: 31 },
-	        // q: {data: 'Q', start: 32, end: 33 },
-	        // r: {data: 'R', start: 34, end: 35 },
-	        // s: {data: 'S', start: 36, end: 37 },
-	        // t: {data: 'T', start: 38, end: 39 },
-	        // u: {data: 'U', start: 40, end: 41 },
-	        // v: {data: 'V', start: 42, end: 43 },
-	        // w: {data: 'W', start: 44, end: 45 },
-	        // x: {data: 'X', start: 46, end: 47 },
-	        // y: {data: 'Y', start: 48, end: 49 },
-	      };
+  
 
-		
-
-		var run = function () {
-			console.log("Running")
-			var timingProvider = app.motions[MCORP_MOTION_NAME];
-	  
-			// Timing Object
-		var to = new TIMINGSRC.TimingObject({provider:timingProvider});
-
-		// Sequencer
-		var s = new TIMINGSRC.Sequencer(to); 
-
-		var num = 0
-
-		// Load data
-		var r = s.request();
-		Object.keys(data).forEach(function (key) {
-			num = num + 1
-			console.log("Loading cue " + num)
-			r.addCue(key, new TIMINGSRC.Interval(data[key].start, data[key].end));
-		});
-		r.submit();
-
-		// Register Handlers
-		s.on("enter", function (e) {
-			console.log("Enter function")
-			console.log("Bid")
-			console.log(e.data)
-			var asArray = e.key.split('z');
-			console.log(asArray[7]);
-
-			if(asArray[0]==="shift")
-			{
-				console.log("yeh");
-				self.colorShift(parseInt(asArray[1]), parseInt(asArray[2]), parseInt(asArray[3]), parseInt(asArray[4]), parseInt(asArray[5]), parseInt(asArray[6]), parseInt(asArray[7]));
-			}
-			else if(asArray[0]==="change")
-			{
-				console.log("Change")
-				console.log("Cat")
-				// document.body.style.backgroundColor = "rgb(" + asArray[1] + ", " + asArray[2] + ", " + asArray[3] + ")";
-				self.colorShift(parseInt(asArray[1]), parseInt(asArray[2]), parseInt(asArray[3]), parseInt(asArray[1]), parseInt(asArray[2]), parseInt(asArray[3]), 100);
-				// self.colorToColor(parseInt(asArray[1]), parseInt(asArray[2]), parseInt(asArray[3]), parseInt(asArray[4]), parseInt(asArray[5]), parseInt(asArray[6]), parseInt(asArray[7]));
-			}
-			else
-			{
-				console.log("Elsification");
-				self.colorShift(0, 97, 255, 255, 0, 80, 300);
-
-			}
-		  // var el =  document.getElementById(e.key);
-		  // el.classList.add("active");
-		});
-		s.on("exit", function (e) {
-			console.log("Exit function")
-		  var el = document.getElementById(e.key);
-		  el.classList.remove("active");
-		});
-
-       
-        // Report position of timing objects
-        var pos = document.getElementById("pos");
-        to.on("timeupdate", function () {
-          pos.innerHTML = to.query().position.toFixed(2);
-        });
-    	
-
-        	app.run = run
-        	app.init();
-
-    
-        // Visualize timed data
-        var html = "";
-        Object.keys(data).forEach(function (key) {
-          html += "<div id='"+ key +"'>" + JSON.stringify(data[key]) + "</div>";
-        });
-        document.getElementById("data").innerHTML = html;     
-        s.on("enter", function (e) {
-          var el =  document.getElementById(e.key);
-          el.classList.add("active");
-        });
-        s.on("exit", function (e) {
-          var el = document.getElementById(e.key);
-          el.classList.remove("active");
-        });
-      };
-      // kick off
-      if (document.readyState === "complete") run();
-      else window.onload = run;
-
-
-
-
-	
-	    function colorShift(r1, g1, b1, r2, g2, b2, duration)
-	    {
-	    	duration = duration*3/4
-
-	        var rIncrement = (r2-r1)/duration;
-	        var gIncrement = (g2-g1)/duration;
-	        var bIncrement = (b2-b1)/duration;
-	        //console.log(rIncrement);
-	        //console.log(gIncrement);
-	        //console.log(bIncrement);
-	        var counter = 0
-
-	        for(i = 0; i<duration; i += 4)
-	        {
-	            
-	        setTimeout(function(){
-	            //console.log(counter*rIncrement);
-	            var rValue = r1 + parseInt(counter*rIncrement, 10);
-	            var gValue = g1 + parseInt(counter*gIncrement, 10);
-	            var bValue = b1 + parseInt(counter*bIncrement, 10);
-
-	        document.body.style.backgroundColor = "rgb(" + rValue.toString() + ", " + gValue.toString() + ", " + bValue.toString() + ")";
-            if(counter%8 == 0)
-            {
-            console.log("executing")
-        	}
-	            
-	       counter += 4
-	       
-            }, 4*i);
-
-            }
-
-	        
-	        
-	        
-	    }
-	    
-	    function colorToColor(r1, g1, b1, r2, g2, b2, duration)
-	    {
-	        
-	       setTimeout(function(){
-	            console.log(counter*rIncrement);
-	            
-
-	        document.body.style.backgroundColor = "rgb(" + rValue.toString() + ", 102, 102)";
-            
-	            
-	       counter += 2
-	       
-            }, i*2); 
-	    }
-
-	    
-	
-	    function openAlert(mess)
-	    {
-	        colorShift(0, 97, 255, 255, 0, 80, 300);
-	        var counter = 0
-	        for(i = 0; i<256; i++)
-	        {
-	            
-	        setTimeout(function(){
-	            //console.log("hello");
-	            var res = mess.charAt(counter);
-	            console.log("Message:");
-	            console.log(mess)
-	            //console.log(res);
-	           counter = counter + 1;
-	           var d = new Date();
-	        var n = d.getTime();
-	        //console.log(i)
-	        //document.body.style.backgroundColor = "rgb(" + (counter).toString() + ", 102, 102)";
-
-
-    //console.log("dog".charAt(i));
-            }, i*16);
-            	            //console.log(counter);
-
-            }
-	        
-	        //alert(n);
-	    }
-	    
-	</script>
-
-
-	
-		    
-    <p>
-      <!-- Timing Objects position --> 
-      Timing Object position <span id="pos"></span>
-    </p>
-    
-    
-
-	
 </body>
+
 </html>
