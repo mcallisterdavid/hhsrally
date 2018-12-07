@@ -34,6 +34,18 @@
          margin: 6vh 0px 0 0;
      line-height: 5vh;
     }
+    #bigger_subtitle{
+         height: 45px;
+         font-family: 'Open Sans', sans-serif;
+         font-weight: 300;
+         color: white;
+         font-size: 26px; 
+         z-index: 4;
+         text-align: center;
+         vertical-align: center;
+         margin: 7vh 0px 0 0;
+     line-height: 5vh;
+    }
     #header{display:none;}
     #header2{display:none;}
     </style>
@@ -54,6 +66,17 @@
             <p>Designed by Indopak and David McAllister<br/>Powered by Motion Corp</p>
          </div>
     </div>
+    <div id="header3">
+         <div id="logo_title">
+            <p>Please Hold Your Phone with the Screen Facing Outward</p>
+         </div>
+    </div>
+
+    <div id="header4">
+         <div id="bigger_subtitle">
+            <p>The show will begin soon!</p>
+         </div>
+    </div>
 	
 	<script>
 			
@@ -71,6 +94,7 @@
 	        changez0z0z0zkdk: {data: 'A,B,C,D', start: 2, end: 2.15},
 	        shiftz0z0z0z51z42z10z200zkkd: {data: 'D,A,B,C,D', start: 2.2, end: 3},
 	        endCredit: {data: 'A,B,C,D', start: 104, end: 107},
+	        holdOutFade: {data: 'A,B,C,D', start: 2.1, end: 2.8},
 
 	        //yellow
 	        shiftz0z0z0z255z208z0z60zkkd: {data: 'D,A,B,C,D', start: 3, end: 3.3},
@@ -479,6 +503,17 @@
    			});
    				$(document).ready(function () {
      				$("#header2").css("opacity", 1).fadeIn(2000)
+   				});
+			}
+			else if(asArray[0]==="holdOutFade")
+			{
+				console.log("End Crediting")
+				$(document).ready(function () {
+				$("#header3").css("opacity", 1).fadeOut(400)
+     			// $("#header").hide().fadeIn(10000); 
+   			});
+   				$(document).ready(function () {
+     				$("#header4").css("opacity", 1).fadeOut(400)
    				});
 			}
 			else
