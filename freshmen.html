@@ -5,27 +5,49 @@
 <script text="javascript" src="./lib/timingsrc.js"></script>
 
 <script type="text/javascript" src="https://www.mcorp.no/lib/mcorp-2.0.js"></script>
+<script type="text/javascript" src="js/jquery-1.3.2.js"></script>
 
 <style type="text/css">
-    .active {color:white}
-     #logo_title, #logo_subtitle{
+    /*.active {color:white}*/
+     #logo_title{
          height: 45px;
          font-family: 'Open Sans', sans-serif;
          font-weight: 300;
+         color: white;
          font-size: 30px; 
          z-index: 4;
          text-align: center;
          vertical-align: center;
-         margin: 160px 0px 0 0;
-     line-height: 75px;
+         margin: 35vh 0px 0 0;
+     line-height: 20vh;
     }
+    #logo_subtitle{
+         height: 45px;
+         font-family: 'Open Sans', sans-serif;
+         font-weight: 300;
+         color: white;
+         font-size: 20px; 
+         z-index: 4;
+         text-align: center;
+         vertical-align: center;
+         margin: 6vh 0px 0 0;
+     line-height: 5vh;
+    }
+    #header{display:none;}
+    #header2{display:none;}
     </style>
 </head>
 <body>
 
 	<div id="header">
          <div id="logo_title">
-            <p>HHS Indopak Bhangra<br/>by HHS Indopak and David McAllister<br/>Powered by Motion Corp</p>
+            <p>Homestead High School Indopak Bhangra</p>
+         </div>
+    </div>
+
+    <div id="header2">
+         <div id="logo_subtitle">
+            <p>Designed by Indopak and David McAllister<br/>Powered by Motion Corp</p>
          </div>
     </div>
 
@@ -46,9 +68,12 @@
 		// Timed Data
 		//200 per second
 	      var data = {
+
+	      	// $("#header").hide()
+
 	        changez0z0z0zkdk: {data: 'A,B,C,D', start: 2, end: 2.15},
 	        shiftz0z0z0z51z42z10z200zkkd: {data: 'D,A,B,C,D', start: 2.2, end: 3},
-
+	        endCredit: {data: 'A,B,C,D', start: 104, end: 107},
 	        //yellow
 	        shiftz0z0z0z255z208z0z60zkkd: {data: 'D,A,B,C,D', start: 3, end: 3.3},
 	        shiftz255z208z0z0z0z0z60zkkd: {data: 'D,A,B,C,D', start: 3.3, end: 3.6},
@@ -326,7 +351,7 @@
 
 	        shiftz255z255z255z0z0z0z1400zmmfuuukew: {data: 'D,A,B,C,D', start: 97.65, end: 101.9}, 
 
-	        shiftz255z255z255z0z0z0z400zmmfuuukew: {data: 'D,A,B,C,D', start: 101.9, end: 104}, 
+	        shiftz255z255z255z0z0z0z600zmmfuuukew: {data: 'D,A,B,C,D', start: 101.9, end: 104}, 
 
 
 	        // primaryNoisez50zkkkkfk: {data: 'D,A,B,C,D', start: 27, end: 27.25},
@@ -448,8 +473,13 @@
 			}
 			else if(asArray[0]==="endCredit")
 			{
+				console.log("End Crediting")
 				$(document).ready(function () {
-     				$("#header").fadeIn(3000); 
+				$("#header").css("opacity", 1).fadeIn(2000)
+     			// $("#header").hide().fadeIn(10000); 
+   			});
+   				$(document).ready(function () {
+     				$("#header2").css("opacity", 1).fadeIn(2000)
    				});
 			}
 			else
@@ -461,11 +491,11 @@
 		  // var el =  document.getElementById(e.key);
 		  // el.classList.add("active");
 		});
-		s.on("exit", function (e) {
-			console.log("Exit function")
-		  var el = document.getElementById(e.key);
-		  el.classList.remove("active");
-		});
+		// s.on("exit", function (e) {
+		// 	console.log("Exit function")
+		//   var el = document.getElementById(e.key);
+		//   el.classList.remove("active");
+		// });
 
        
         // Report position of timing objects
@@ -479,20 +509,20 @@
         	app.init();
 
     
-        // Visualize timed data
-        var html = "";
-        Object.keys(data).forEach(function (key) {
-          html += "<div id='"+ key +"'>" + JSON.stringify(data[key]) + "</div>";
-        });
-        document.getElementById("data").innerHTML = html;     
-        s.on("enter", function (e) {
-          var el =  document.getElementById(e.key);
-          el.classList.add("active");
-        });
-        s.on("exit", function (e) {
-          var el = document.getElementById(e.key);
-          el.classList.remove("active");
-        });
+        // // Visualize timed data
+        // var html = "";
+        // Object.keys(data).forEach(function (key) {
+        //   html += "<div id='"+ key +"'>" + JSON.stringify(data[key]) + "</div>";
+        // });
+        // document.getElementById("data").innerHTML = html;     
+        // s.on("enter", function (e) {
+        //   var el =  document.getElementById(e.key);
+        //   el.classList.add("active");
+        // });
+        // s.on("exit", function (e) {
+        //   var el = document.getElementById(e.key);
+        //   el.classList.remove("active");
+        // });
       };
       // kick off
       if (document.readyState === "complete") run();
