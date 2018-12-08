@@ -21,7 +21,7 @@
          text-align: center;
          /*vertical-align: center;*/
          margin: 0vh 0px 0 0;
-     line-height: 7vh;
+     line-height: 18vh;
     }
      #logo_title2{
          height: 45px;
@@ -32,23 +32,31 @@
          z-index: 4;
          text-align: center;
          /*vertical-align: center;*/
-         margin: 0vh 0px 0 0;
-     line-height: 6vh;
+         margin: 14vh 0px 0 0;
+     line-height: 32vh;
     }
+    .your-centered-div {
+    
+    position: absolute; /* positions out of the flow, but according to the nearest parent */
+    top: 200; right: 0; /* confuse it i guess */
+    bottom: 0; left: 0;
+    margin: auto; /* make em equal */
+}
     </style>
 <body>
 
 <div id="header">
          <div id="logo_title">
-            <p></br>Homestead Rally App</p>
+            <p>Homestead Rally App</p>
          </div>
     </div>
     
 
-<h1></br></h1>
-<!-- <h1>Synced by Motion Corp</h1> -->
 
-<iframe width="750" height="422" src="https://www.youtube.com/embed/m2GqSw95w1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<!-- <h1>Synced by Motion Corp</h1> -->
+<!-- <div class="your-centered-div"> -->
+<iframe width="750" height="422" src="https://www.youtube.com/embed/m2GqSw95w1M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" style="position:relative; top: 10vh" allowfullscreen></iframe>
+<!-- </div> -->
 <!--.canvas-->
 
 <script>
@@ -58,22 +66,22 @@
 
 <div id="header3">
          <div id="logo_title2">
-            <p></br></br>Try it Yourself!</p>
+            <p>Try it Yourself!</p>
          </div>
     </div>
 
-   </br></br></br>
 
-<div class="buttons"><a class="button1" href="freshmen.html">Freshmen</a><a class="button2" href="sophomores.html">Sophomores</a></div>
+
+<div class="buttons"><a class="button1" style="position:relative; top: 21vh" href="freshmen.html">Freshmen</a><a class="button2" style="position:relative; top: 21vh" href="sophomores.html">Sophomores</a></div>
 
  <br><br><br><br><br>
 
 
-<div class="buttons"><a class="button1" href="juniors.html">Juniors</a><a class="button2" href="seniors.html">Seniors</a></div>
+<div class="buttons"><a class="button1" style="position:relative; top: 18vh" href="juniors.html">Juniors</a><a class="button2" style="position:relative; top: 18vh" href="seniors.html">Seniors</a></div>
 
 <br><br><br><br><br>
 
-<div class="buttons"><a class="button1" href="testPage.html">Control Panel</a></div>
+<div class="buttons"><a class="button1" style="position:relative; top: 15vh" href="testPage.html">Control Panel</a></div>
 
 <!-- Footer-->
 <div class="foot-wrapper">
